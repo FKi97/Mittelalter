@@ -25,7 +25,7 @@
     <script>
       (function() {
         const jsonp = {}
-        const allowOutsideDriver = false
+        const allowOutsideDriver = true
 
         function shouldLoad() {
           if(allowOutsideDriver)
@@ -76,7 +76,7 @@
         function __preventLoad() {
           let appDiv = document.getElementById('app')
           let errMsgSpan = document.createElement('span')
-          let errMsgText = document.createTextNode('Error: Content launched outside of a supported LMS enviroment.')
+          let errMsgText = document.createTextNode('Error: Content launched outside of a supported LMS environment.')
 
           errMsgSpan.appendChild(errMsgText)
           appDiv.appendChild(errMsgSpan)
